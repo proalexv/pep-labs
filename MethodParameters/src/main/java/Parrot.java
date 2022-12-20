@@ -7,11 +7,12 @@ public class Parrot {
      * for example:
      * String str = copy("hello");
      * System.out.println(str); -> prints out "hello"
-     *
+     * use a method?
      * @param text is a parameter passed into this method by whatever called it.
      * @return text.
-     */
+     */ 
+    
     public String copy(String text){
-        return "return text please!";
+        return text;
     }
 }
