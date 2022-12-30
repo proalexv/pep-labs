@@ -17,7 +17,7 @@ public class Player {
     
     public String playerName;
     public int level;
-    
+    // this is where the constructor begins
     public Player(String playerName){
         this.playerName = playerName;
         this.level = 1;
