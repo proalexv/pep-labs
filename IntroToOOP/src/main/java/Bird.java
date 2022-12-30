@@ -12,8 +12,7 @@
  *          Try "ctrl + left-click" on the text "String" to see the source code of the String class.
  * 
  * An object is an instantiation of a class.
- * We would like objects to be able to:
- *      a) contain some data
+  *      a) contain some data
  *      and
  *      b) change its behavior based off of the data that it individually contains.
  *
@@ -26,12 +25,14 @@
  * greater than or equal to 3.
  * 
  * 
- */
+ */ 
+
 public class Bird {
+
     /**
      * A variable (in this context, often referred to as a field), which represents the age of the bird.
      */
-    public int ageMonths;
+    int ageMonths; 
 
     /**
      * A constructor for the bird class: this method allows us to build a new bird with the 'new' keyword.
@@ -43,9 +44,15 @@ public class Bird {
     /**
      * @return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is
      *  * greater than or equal to 3.
+     *
+     
      */
+     
+     
     public String sound(){
-        return "";
-    }
-
+        if (ageMonths <3){
+            return "Tweet";
+        } else 
+        return "Chrip";
+}
 }
