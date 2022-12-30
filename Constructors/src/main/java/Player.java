@@ -36,7 +36,6 @@ public class Player {
      * @param playerName the name of the player to be created.
      */
     
-// why do we set this.level to level insteadl of 1? where in the program is this stated?
     /**
      * Again, the values of this object should be set with the help of the 'this' keyword to avoid confusion between
      * class fields / parameter variables.
@@ -51,7 +50,8 @@ public class Player {
      * @param level the starting level of the player to be created.
      */
     public Player(String playerName, int level){
-
+        this.playerName = playerName;
+        this.level = level;
     }
     }
 
