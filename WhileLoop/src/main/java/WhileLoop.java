@@ -32,12 +32,17 @@ public class WhileLoop {
      *            (exclusive - for example, when end is 5, we calculate 0+1+2+3+4)
      *
      **/
+    // define var whileExample that takes in int end
     public int whileExample(int end){
+       // send sum and int i = 0 to start
         int sum = 0;
         int i = 0;
 
-//        code here
-
+//    while i is less than user inputed int end, the program will increamte i by 1 and then att that to the sum    code here 
+while(i < end){
+    i = i + 1;
+    sum = i + sum;
+}
         return sum;
     }
 }
