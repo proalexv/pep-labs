@@ -40,8 +40,10 @@ public class WhileLoop {
 
 //    while i is less than user inputed int end, the program will increamte i by 1 and then att that to the sum    code here 
 while(i < end){
-    i = i + 1;
     sum = i + sum;
+    i = i + 1;
+    
+
 }
         return sum;
     }
