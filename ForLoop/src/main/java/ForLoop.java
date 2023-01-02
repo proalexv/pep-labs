@@ -1,6 +1,7 @@
 
 
-public class ForLoop {
+public class ForLoop  
+{
     /**
      *
      * Let's try writing a for loop at the 'code here' point...
@@ -41,9 +42,10 @@ public class ForLoop {
     public String returnNumbers(int start, int end){
         String buildingString = "";
 
-//        code here
-int i = start;
-for(i < end; i++){
-                  System.out.print(i);
+       for(int i = start; i < end;  i++){
+             buildingString = buildingString + i + " ";
+        }
+        return buildingString;
     }
 }
+
