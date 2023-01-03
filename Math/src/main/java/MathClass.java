@@ -21,5 +21,6 @@ public class MathClass {
      */
     public double mathPow(double a, double b){
         return 0;
+        Math.Pow
     }
 }
