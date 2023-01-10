@@ -35,13 +35,14 @@ public class QueueExercise {
     
     }
 
-    /**
+    /** 
      * Return the ssize of a queue.
      * @param queue a Queue<String> object.
      * @return the length of queue.
      */
-    public int getSize(Queue<String> queue){
-        return 0;
+    
+     public int getSize(Queue<String> queue){
+        return queue.size();
     }
 
     /**
@@ -51,7 +52,7 @@ public class QueueExercise {
      * @param item a String that should be added to Queue.
      */
     public void addToEndOfQueue(Queue<String> queue, String item){
-
+        queue.add(item);
     }
 
     /**
@@ -61,7 +62,8 @@ public class QueueExercise {
      * @return the next String due to be removed (polled) from the Queue<String> (the oldest item in the queue.)
      */
     public String removeFromStartOfQueue(Queue<String> queue){
-        return "";
+        
+        return queue.remove();
     }
 
     /**
@@ -70,6 +72,6 @@ public class QueueExercise {
      * @return the next String due to be removed (peeked) from the Queue<String> (the oldest item in the queue.)
      */
     public String getStartOfQueueWithoutRemoving(Queue<String> queue){
-        return "";
+        return queue.peek();
     }
 }
