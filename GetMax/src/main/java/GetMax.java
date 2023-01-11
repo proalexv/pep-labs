@@ -7,6 +7,13 @@ public class GetMax {
      * @return the largest value in arr.
      */
     public int max(int[] arr){
+       //itterate through the elements of the arrary 
+       // write a for loop starting with the first element and the itterating through the rest of the elements comapring them 
+       // if arr[0] < arr[index]
+       //arr[index] becomes the new one to be compared else move on the next element
+       //
+
+       
         return -1;
     }
 }
