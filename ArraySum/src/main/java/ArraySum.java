@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArraySum {
     /**
      * This method should return the sum of all ints in an array - this is a very useful trick to know!
@@ -7,7 +9,16 @@ public class ArraySum {
      * @return the sum of all values in arr.
      */
     public int sum(int[] arr){
-
-        return 0;
+        int sum = Arrays.stream(arr).sum();
+        return sum;
     }
 }
+
+
+//*  for (let index = 0; index < array.length; index++) {
+  //console.log(array[index]);
+  // sum =0
+  //arr[index]
+  //sum = sum + arr[index]
+  //implement a for while loop to itterate through the index, so we may start adding values to the arry
+  //shortcut given above by reading
