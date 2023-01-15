@@ -1,1 +1,1 @@
-SELECT firstname FROM sit_username;
+SELECT firstname FROM site_user;
