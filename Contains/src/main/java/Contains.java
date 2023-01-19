@@ -15,7 +15,8 @@ public class Contains {
        //how to call the arrary
         //int[] arr;
 for (int i = 0; i < arr.length; i++) {
-    //maybe the issue is here it might stop here
+    //maybe the issue is here it might stop here at the end of the list and set b to whatever that is instead of
+     //stoping when the condion is met
     if (target == arr[i]) {
         b = true;
 
