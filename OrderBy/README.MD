@@ -16,10 +16,7 @@ When ordering by multiple columns, the priority is from left to right.
 We can order by columns in ascending or descending order. By default, `ORDER BY` is in ascending order. Ascending
 order places lesser values before greater values. Descending order is the opposite, greatest values first.
 
-For example, one might add the `ORDER BY` clause after the `WHERE` clause of a query to order employees from highest to
-lowest salary:
-```sql
-SELECT * FROM employee_table WHERE current = true ORDER BY salary DESC
+ 
 ```
 
 Additional reference material if needed: https://www.w3schools.com/sql/sql_orderby.asp
