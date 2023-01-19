@@ -1,6 +1,7 @@
 
 
 public class Contains {
+    boolean b; 
 
     /**
      * This method should search an array to see if that array contains some value.
@@ -13,14 +14,15 @@ public class Contains {
     public boolean arrayContains(int[] arr, int target){
        //how to call the arrary
         //int[] arr;
-for (int i = 0; i <arr.length; i++) {
-  
+for (int i = 0; i < arr.length; i++) {
+    //maybe the issue is here it might stop here
     if (target == arr[i]) {
-        return true;
+        b = true;
+
     }else{
-        return false;    }
+       b = false; }
     
 }
-return false;
+return b;
     }
 }

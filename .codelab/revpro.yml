@@ -42,10 +42,10 @@
   :count_labs_total: 96
   :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 2
+  :count_tests_passed: 3
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 2
+  :count_tests_passed: 3
   Start:
     :Week: 1
     :Order: 1
@@ -557,10 +557,10 @@
     :Order: 13
     :Type: challenge
     :count_tests: 4
-    :count_tests_passed: 2
+    :count_tests_passed: 3
     :tests:
       containsTest1: 1
-      containTest2: 0
+      containTest2: 1
       containTest3: 1
       containTest4: 0
   DoesNotContain:
