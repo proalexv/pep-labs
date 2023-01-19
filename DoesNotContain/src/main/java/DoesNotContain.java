@@ -13,6 +13,19 @@ public class DoesNotContain {
      * @return true if arr does not contain target. false otherwise.
      */
     public boolean arrayDoesNotContain(int[] arr, int target){
-        return false;
+        for (int i = 0; i <arr.length; i++) {
+  
+            if (target == arr[i]) {
+                return false;
+            
+            }else{
+                return true;    }
+            
+        }
+        // I need to add this here but how do I get rid of it? 
+        return true;
+       
+            }
+        
     }
-}
+
