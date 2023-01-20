@@ -1,6 +1,7 @@
 
 public class DoesNotContain {
-    /**
+    boolean b; 
+   /**
      * The inverse of the contains value challenge: check if the array does *not* contain the value.
      * Note that this is not as simple as flipping the return true/false from the 'Contains' challenge.
      * You should think critically about the logic that you write within the for loop.
@@ -13,6 +14,16 @@ public class DoesNotContain {
      * @return true if arr does not contain target. false otherwise.
      */
     public boolean arrayDoesNotContain(int[] arr, int target){
-        return false;
+        do{
+            for(int i = 0; i < arr.length; i++) {
+              if target =arr[i]{
+                b=true;
+              }
+                else {
+                b = false;}
+              
+            }
+         }while(b = false);
+         return b;
     }
 }
