@@ -18,8 +18,8 @@ We could go about solving this in 2 different ways:
 - We can use the `ALTER` keyword to add a new column to the existing table. (This is what we will be looking at for this lab)
 The `ALTER` keyword allows us to add / remove columns and constraints on an existing table.
 The syntax for the `ALTER` keyword is different depending on what we want to achieve:
-     - Adding a column:
-         - ```sql ALTER TABLE table_name ADD column_name data_type [constraint];```
+     - Adding a column:sql
+         - ``` ALTER TABLE table_name ADD column_name data_type [constraint];```
      - Removing a column:
          - ```sql ALTER TABLE table_name DROP column_name;```
 
