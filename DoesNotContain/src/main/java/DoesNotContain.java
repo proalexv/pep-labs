@@ -16,14 +16,16 @@ public class DoesNotContain {
     public boolean arrayDoesNotContain(int[] arr, int target){
         do{
             for(int i = 0; i < arr.length; i++) {
-              if target =arr[i]{
-                b=true;
+              if (target == arr[i]){
+                b=false;
+                if (b=false){
+                  break;
+                }
               }
                 else {
-                b = false;}
+                b = true;}
               
             }
-         }while(b = false);
-         return b;
-    }
+    return b;
+}
 }
