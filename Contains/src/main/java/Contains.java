@@ -19,6 +19,9 @@ for (int i = 0; i < arr.length; i++) {
      //stoping when the condion is met
     if (target == arr[i]) {
         b = true;
+        if(b=true);{
+            break;
+        }
 
     }else{
        b = false; }
