@@ -40,12 +40,12 @@
     :git_user_name: Alejandro Rodriguez
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 1
+  :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 4
+  :count_tests_passed: 1
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 4
+  :count_tests_passed: 1
   Start:
     :Week: 1
     :Order: 1
@@ -568,13 +568,17 @@
     :Order: 14
     :Type: challenge
     :count_tests: 4
-    :count_tests_passed: 4
+    :count_tests_passed: 1
     :tests:
       containsTest1: 1
       containTest2: 1
       containTest3: 1
       containTest4: 1
       DoesNotContainTest: 0
+      maxMinTest1: 0
+      maxMinTest2: 0
+      maxMinTest3: 0
+      maxMinTest4: 1
   ArraysAreEqual:
     :Week: 4
     :Order: 15
