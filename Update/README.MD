@@ -1,6 +1,4 @@
 # Background
-SQL sublanguage: DML (Data Manipulation Language)
-
 Now that we know how to insert and remove records from a table, we are going to learn how to update a record.
 
 To update a record we utilize the `UPDATE` keyword. The syntax for updating a record is as follows:
