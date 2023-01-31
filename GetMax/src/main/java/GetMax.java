@@ -6,21 +6,19 @@ public class GetMax {
      * @param arr an array of ints to be manipulated.
      * @return the largest value in arr.
      */
-    public int max(int[] arr){
-       //itterate through the elements of the arrary 
-       // write a for loop starting with the first element and the itterating through the rest of the elements comapring them 
-       // if arr[0] < arr[index]
-       //arr[index] becomes the new one to be compared else move on the next element
-       //
-       int max = -999;
+    public int max(int[] arr)
+    {
+       int[] max = new int[1];
+       max[0] = -999;
 		for(int i = 0; i < arr.length;i++)
 		{
-			if(arr[i] > max)
+			if(arr[i] > max[0])
 			{
-				max = arr[i];
+				max[0] = arr[i];
 			}
            
 		}
+    return max[0];
+    
     }
-    return max
 }
