@@ -11,15 +11,15 @@ public class ArraySum {
      * @return the sum of all values in arr.
      */
   
-     public static int[] sum(int arr)
+     public int sum(int[] arr){
      int[] sum2 = new int[1];
-     sum2[0]=0;
+     sum2[0]= 0;
     for (int i = 0; i < arr.length; i++) {
        sum2 = sum2 + arr[i];
       }
       return sum2;
     }
-
+  }
 
 
 //*  for (let index = 0; index < array.length; index++) {
