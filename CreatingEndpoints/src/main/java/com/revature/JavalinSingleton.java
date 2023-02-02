@@ -12,14 +12,15 @@ public class JavalinSingleton {
      * Note: Please refer to the "CreatingEndpoints.MD" file for more assistance if needed.
      */
     public static Javalin getInstance(){
-   
-        Javalin app = Javalin.create().start(9000);
-    
-        return app.get("/get-request", ctx -> {
-            //logic to be executed when this endpoint is hit
-            ctx.result("Hello World");
+     Javalin app = Javalin.create();
+      
+    app.get("hello", ctx -> {
+           
+        ctx.result("Hello World");
         });
+        return app;
     }
+    
 }
 
     
