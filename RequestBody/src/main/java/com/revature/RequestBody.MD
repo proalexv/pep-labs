@@ -31,8 +31,7 @@ There are 2 methods defined in the `ObjectMapper` class that we will use:
 
 ## Steps to retrieve data from a JSON String to a Java object
 
-Lets say we have the following POST endpoint which will send us a user json string shown above. 
-
+         
 ```java
 app.post("/user", ctx -> {
 
