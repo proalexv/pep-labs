@@ -45,13 +45,13 @@ public class FlightService {
      *         inform our provide the front-end client with information about the added Flight.
      */
     public Flight addFlight(Flight flight){
-        return null;
+        return flight;
     }
 
     /**
      * TODO: Use the FlightDAO to update an existing flight from the database.
-     * You should first check that the flight ID already exists. To do this, you could use an if statement that checks
-     * if flightDAO.getFlightById returns null for the flight's ID, as this would indicate that the flight id does not
+     *      * You should first check that the flight ID already exists. To do this, you could use an if statement that checks
+    if flightDAO.getFlightById returns null for the flight's ID, as this would indicate that the flight id does not
      * exist.
      *
      * @param flight_id the ID of the flight to be modified.

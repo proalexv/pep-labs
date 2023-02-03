@@ -33,7 +33,7 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "Select * FROM flights;";
+            String sql = "SELECT * FROM flights";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
@@ -66,12 +66,12 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "select * from flights where ColumnName = ?;";
+            String sql = "select * from flights where flight_id = ?";
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setInt(0,0);
+            preparedStatement.setInt(1,id);
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
@@ -113,8 +113,8 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString and setInt methods here. Do something else here??
-            preparedStatement.setString(0,string1);
-            preparedStatement.setString(1,string2);
+            preparedStatement.setString(1,flight.getDeparture_city());
+            preparedStatement.setString(2,flight.getArrival_city());
 
 
             preparedStatement.executeUpdate();
@@ -150,10 +150,13 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "UPDATE flights SET flight_id=?, departure_city=? WHERE arrival_city = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
+            preparedStatement.setInt(1,id);
+            preparedStatement.setString(2,flight.getDeparture_city());
+            preparedStatement.setString(3,flight.getArrival_city());
 
 
             preparedStatement.executeUpdate();
@@ -171,9 +174,7 @@ public class FlightDAO {
      * "select * from TableName where ColumnName1 = ? and ColumnName2 = ?;";
      * The question marks will be filled in by the preparedStatement setString, setInt, etc methods. they follow
      * this format, where the first argument identifies the question mark to be filled (left to right, starting
-     * from zero) and the second argument identifies the value to be used:
-     * preparedStatement.setString(1,"column 1 value");
-     * preparedStatement.setInt(2,123);
+     * from zero) and the second argument 
      *
      * @param departure_city the departing city.
      * @param arrival_city the arriving city.
@@ -184,10 +185,11 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "select * from flights where departure_city = ? and arrival_city = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-
             //write PreparedStatement setString and setInt methods here.
+            * preparedStatement.setString(1,departure_city);
+            * preparedStatement.setString(2,arrival_city);
 
 
             ResultSet rs = preparedStatement.executeQuery();
