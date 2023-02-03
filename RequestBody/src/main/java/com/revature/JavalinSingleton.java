@@ -21,13 +21,19 @@ public class JavalinSingleton {
          * problem1: retrieve the song object from the request body and return the artist name.
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-
         app.post("/problem1", ctx -> {
+           
+            //retreive the json string from the request body
         String jsonString = ctx.body();
+
+            //use jackson to convert json string to a song object
         ObjectMapper om = new ObjectMapper();
         Song song = om.readValue(jsonString, Song.class);
 
-        ctx.contentType(arg0:"application/json");
+            //let the request know we will send back json in the body
+        ctx.contentType("application/json");
+
+            //return the json string in the responce body
         ctx.result(song.getArtistName());
         
          });
@@ -45,9 +51,9 @@ public class JavalinSingleton {
         app.post("/problem2", ctx -> {
                String jsonString = ctx.body();
                ObjectMapper om = new ObjectMapper();
-               Song artist = om.readvalue(jsonString, Song.class)
-               ctx.contentType(arg0: "application/json");
-               artist.setArtistName(artistName:"Beatles");
+               Song artist = om.readValue(jsonString, Song.class);
+               ctx.contentType("application/json");
+               artist.setArtistName("Beatles");
                String jsonStringToBeReturned = om.writeValueAsString(artist);
                ctx.result(jsonStringToBeReturned);
 
