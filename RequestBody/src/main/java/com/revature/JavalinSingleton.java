@@ -1,5 +1,7 @@
 package com.revature;
 
+import static org.junit.Assume.assumeTrue;
+
 import org.eclipse.jetty.server.Authentication.User;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,39 +19,18 @@ public class JavalinSingleton {
         
         /**
          * problem1: retrieve the song object from the request body and return the artist name.
-         * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
+
         app.post("/problem1", ctx -> {
-                //implement logic here
-                //retrieve the json string from the request body
         String jsonString = ctx.body();
+        ObjectMapper om = new ObjectMapper();
+        Song song = om.readValue(jsonString, Song.class);
 
-    //utilize jackson to convert the json string to a user object
-         ObjectMapper om = new ObjectMapper();
-     User user = om.readValue(jsonString, User.class);
+        ctx.contentType(arg0:"application/json");
+        ctx.result(song.getArtistName());
+        
          });
-
-
-/**         app.post("/user", ctx -> {
-    //retrieve the json string from the request body
-    String jsonString = ctx.body();
-
-    //utilize jackson to convert the json string to a user object
-    ObjectMapper om = new ObjectMapper();
-    User user = om.readValue(jsonString, User.class);
-});
-```*/
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -62,7 +43,14 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem2", ctx -> {
-               //implement logic here
+               String jsonString = ctx.body();
+               ObjectMapper om = new ObjectMapper();
+               Song artist = om.readvalue(jsonString, Song.class)
+               ctx.contentType(arg0: "application/json");
+               artist.setArtistName(artistName:"Beatles");
+               String jsonStringToBeReturned = om.writeValueAsString(artist);
+               ctx.result(jsonStringToBeReturned);
+
         });
 
 
