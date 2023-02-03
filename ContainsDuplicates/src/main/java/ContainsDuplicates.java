@@ -21,7 +21,6 @@ public class ContainsDuplicates {
           }
     
  
-        // Return the converted Set
         int arrayLength = nums.length;        
         int setLength = set.size();
 
