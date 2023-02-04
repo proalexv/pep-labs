@@ -10,8 +10,16 @@ public class RemoveAllCharacter {
      * @param str A string.
      * @param ch A string containing a single character which should be removed from str.
      * @return str, without any characters of type ch.
+     * 
+     
+     * String s1="Google is a very good website";  
+    String replaceString=s1.replaceAll("a","e");//replaces all occurrences of "a" to "e"  
+    System.out.println(replaceString);  
+    }}  
      */
+
     public String removeAll(String str, String ch){
-        return null;
+        String replaceString = str.replaceAll(ch,"");
+        return replaceString;
     }
 }
