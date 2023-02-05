@@ -16,8 +16,10 @@ public class ArraysAreEqual {
      */
     public boolean equal(int[] a, int[] b){
         for (int i = 0; i < a.length; i++) {
-            
-          }
-        return false;
+            if(a[i] != b[i]){
+              return false;
+            }
+           }
+        return true;
     }
 }
