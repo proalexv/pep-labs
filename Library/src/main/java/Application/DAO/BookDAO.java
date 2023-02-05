@@ -62,7 +62,7 @@ public class BookDAO {
 
             //write preparedStatement's setInt method here.
             preparedStatement.setInt(1, isbn);
-            
+
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
                 Book book = new Book(rs.getInt("isbn"),
@@ -88,10 +88,12 @@ public class BookDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me" ;
+            String sql = "INSERT INTO book (isbn, author_id,name, copies_available) VALUES ?" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-            //write preparedStatement's setString and setInt methods here.
+            //write preparedStatement's setString and setInt methods here. /COME BACK TOO/
+            preparedStatement.setString(1, "isbn, author_id,name, copies_available");
+            preparedStatement.setInt(2, book);
 
             preparedStatement.executeUpdate();
             return book;
@@ -110,11 +112,11 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT * FROM book WHERE copies_available >0 ";
+            String sql = "SELECT * FROM book WHERE copies_available > ? ";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
-            
+            preparedStatement.setInt(1, 0);
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
