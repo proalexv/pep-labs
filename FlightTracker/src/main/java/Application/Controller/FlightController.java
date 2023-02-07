@@ -58,6 +58,7 @@ public class FlightController {
      * to manipulate the Context object, which is a special object provided by Javalin which contains information about
      * HTTP requests and can generate responses. There is no need to change anything in this method. 
      */
+    
     public Javalin startAPI(){
         Javalin app = Javalin.create();
         app.post("/flights", this::postFlightHandler);

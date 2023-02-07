@@ -49,8 +49,7 @@ public class FlightDAO {
     }
 
     /**
-     * TODO: Retrieve a specific flight using its flight ID.
-     *
+      *
      * You only need to change the sql String and set preparedStatement parameters.
      *
      * Remember that the format of a select where statement written as a Java String looks something like this:
