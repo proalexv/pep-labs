@@ -35,9 +35,9 @@ public class AuthorService {
         this.authorDAO = authorDAO;
     }
     /**
-     * TODO: Use the AuthorDAO to retrieve all authors.
+     * TODO: Use the AuthorDAO to retrieallve all authors.
      *
-     * @return all authors
+     * @return  authors
      */
     public List<Author> getAllAuthors() {
         return authorDAO.getAllAuthors();
