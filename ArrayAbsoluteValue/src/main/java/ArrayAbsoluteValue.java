@@ -20,6 +20,6 @@ public class ArrayAbsoluteValue {
             myIntArray[i] = postiveNums;
         }
         }
-        return null;
+        return myIntArray;
     }
 }
