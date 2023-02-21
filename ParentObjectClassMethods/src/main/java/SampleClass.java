@@ -31,7 +31,7 @@
  * parameter that is another SampleClass object, and access its version of a and b. Return true if the values
  * of a and b are equal in both objects, and false otherwise.
  *
- * For .toString, the test cases will check if the String returned by the toString method contains information about
+ * For .toString,  b test cases will check if the String returned by the toString method contains information about
  * the fields of this object. Essentially, you just need to append them to the String that is returned by toString.
  * The string may be formatted in any way.
  *
