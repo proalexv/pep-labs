@@ -11,7 +11,7 @@ public class ArrayAbsoluteValue {
     public int[] getArrayAbs(int[] nums){
         int[] myIntArray = new int[nums.length];
        
-        for(i=0; i<=nums.length; i++){
+        for(i = 0; i<=nums.length; i++){
         if(nums[i] >= 0){
             myIntArray[i] = nums[i];
         }
