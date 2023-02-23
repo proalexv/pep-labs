@@ -14,7 +14,7 @@ public class IsThereSum {
         //itterate through the arrary and grab an element
         for (int i = 0; i < arr.length; i++) {
              // itterate through the arrary once more comparing each element to the next one and checking if it adds up to the arrary 
-             for (int j = 1; j < arr.length; j++){
+             for (int j = i + 1; j < arr.length; j++){
                 if(arr[i] + arr[j] == target){
                     return true;
                 }
