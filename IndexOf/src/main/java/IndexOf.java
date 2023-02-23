@@ -11,31 +11,11 @@ public class IndexOf {
      * @return the first index (position) of n in arr. if n does not exist in arr, return -1.
      */
     public int getIndex(int[] arr, int n){
-        return -1;
-    {
- 
-        // if array is Null
-        if (arr == null) {
-            return -1;
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == n) {
+            return i;
         }
- 
-        // find length of array
-        int len = arr.length;
-        int i = 0;
- 
-        // traverse in the array
-        while (i < len) {
- 
-            // if the i-th element is t
-            // then return the index
-            if (arr[i] == t) {
-                return i;
-            }
-            else {
-                i = i + 1;
-            }
-        }
-        return -1;
     }
-    }
+    return -1;
+}
 }
