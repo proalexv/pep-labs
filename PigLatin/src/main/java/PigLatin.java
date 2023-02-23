@@ -21,11 +21,12 @@ public class PigLatin {
     
 				
     public String returnPigLatin(String in){
-        String latinWord = in.substring(in.length()-1,in.length() );
+        
         
         for (int i = 1; i < in.length()-1; i++) {
-           latinWord = latinWord + in.substring(i,i+1);
+          String latinWord = in.substring(i,i+1);
             }
+            latinWord += latinWord + in.substring(in.length()-1,in.length() );
             latinWord += latinWord + "ay";
             return latinWord;
     }
