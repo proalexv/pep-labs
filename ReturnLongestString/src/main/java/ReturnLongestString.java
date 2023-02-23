@@ -15,7 +15,7 @@ public class ReturnLongestString {
      */
     String max;
     public String longest(String[] arr){
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length-1; i++) {
             int length = arr[i].length();
             int length2 =arr[i+1].length();
             if (length2 > length) {
