@@ -12,14 +12,13 @@ public class ArrayAbsoluteValue {
     public int[] getArrayAbs(int[] nums){
         int[] myIntArray = new int[nums.length];
        
-        for(i = 0; i<=nums.length; i++){
-        if(nums[i] >= 0){
-            myIntArray[i] = nums[i];
-        }
-        else(nums[i] < 0){
-            int postiveNums =nums[i] *-1
-            myIntArray[i] = postiveNums;
-        }
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] >= 0){
+                myIntArray[i] = nums[i];
+            } else {
+                int positiveNums = nums[i] * -1;
+                myIntArray[i] = positiveNums;
+            }
         }
         return myIntArray;
     }
