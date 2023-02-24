@@ -3,8 +3,7 @@
  * T here is a generic type.  It can stand in for any kind of object.
  * Here, our objective is to have an object that can store any object in its 'data' field, and then retrieve it.
  * This doesn't seem useful yet, but in a Collection such as ArrayList, you could have a generic
- * array that can store and retrieve many items of any type. This feature is needed for collections, web server
- * technologies, and advanced database interactivity (ORMs).
+  * technologies, and advanced database interactivity (ORMs).
  *
  * You can read more about generics here: https://www.programiz.com/java-programming/generics
  *
