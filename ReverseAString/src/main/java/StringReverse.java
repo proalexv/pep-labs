@@ -12,7 +12,11 @@ public class StringReverse {
      * @param str a String.
      * @return the reverse of str.
      */
-    public String reverse(String str){
-        return null;
+    public String reverse(String str) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            sb.append(str.charAt(i));
+        }
+        return sb.toString();
     }
 }
