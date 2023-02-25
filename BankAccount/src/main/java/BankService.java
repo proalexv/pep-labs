@@ -18,29 +18,29 @@ public class BankService {
     public BankService(){
         this.balance = 0;
     }
-    /**
-     * TODO: implement functionality to increase the user's balance by amount.
-     * @param amount the amount to be deposited.
-     */
-    public void deposit(double amount){
-        this.balance = this.balance + amount;
-    }
+    
+    
+    
+   public void deposit(double amount){
+       balance = balance + amount;
+   }
 
-    /**
-     * TODO: implement functionality to decrease the user's balance by an amount.
-     * If a withdrawl would result in the user having a negative balance, the withdrawl should not occur.
-     * @param amount the amount to be withdrawn.
-     */
-    public void withdraw(double amount){
-        if (balance - amount >= 0) {
-        balance = balance - amount;}
-    }
+   
+   public void withdraw(double amount){
+       if (amount > balance) {
+        return;
+       }
 
-    /**
-     * There is no need to change this method, it will be used in testing and in the menu class.
-     * @return the user's balance.
-     */
-    public double getBalance(){
-        return 0;
-    }
+        else {
+           balance = balance - amount; 
+        } 
+
+   }
+   /**
+    * There is no need to change this method, it will be used in testing and in the menu class.
+    * @return the user's balance.
+    */
+   public double getBalance(){
+       return balance;
+   }
 }
