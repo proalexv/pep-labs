@@ -55,10 +55,29 @@ public class SampleClass {
     public int a;
     public boolean b;
 
-    //    implement a custom .equals(SampleClass other){} method here.
+     //    implement a custom .equals(SampleClass other){} method here.
+     public boolean equals(Object object1){
+        if (this == object1) 
+        return true;
+
+        if (object1 == null || object1.getClass() != this.getClass()) 
+        return false;
+
+        SampleClass sample = (SampleClass) object1;
+        return sample.a == a && sample.b == b;
+
+
+
+         }
 
 
     //    implement a custom .toString(){} method here.
+    public String toString(){
+        return a+ " is the" + b +"number!";
+ 
+    }
+
+}
 
     
-}
+
