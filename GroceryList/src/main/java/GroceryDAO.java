@@ -18,42 +18,35 @@ import java.util.List;
 public class GroceryDAO {
 
 
-    /**
-     * TODO: Select all of the rows of the Grocery table.
-     * You only need to change the sql String, the rest of the method is already complete.
-     * @return a List of all the groceries contained within the database.
-     */
-    public List<String> getAllGroceries(){
-        Connection connection = ConnectionUtil.getConnection();
-        List<String> groceries = new ArrayList<>();
-        try {
-            //Write SQL logic here
-            String sql = "Select * FROM groceries";
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                groceries.add(rs.getString("grocery_name"));
-            }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-        return groceries;
-    }
-    /**
-     * TODO: Insert a new row into the Grocery table, with the sole column containing groceryName.
-     * You only need to change the sql String, the rest of the method is already complete.
-     * @param groceryName the name of the grocery passed in from the GroceryService.
-     */
-    public void addGrocery(String groceryName){
-        Connection connection = ConnectionUtil.getConnection();
-        try {
-            //Write SQL logic here
-            String sql = "insert into grocery (grocery_name) values ('"+ groceryName +"');";
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ps.executeUpdate();
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-    }
+   
+   public List<String> getAllGroceries(){
+       Connection connection = ConnectionUtil.getConnection();
+       List<String> groceries = new ArrayList<>();
+       try {
+           //Write SQL logic here
+           String sql = "Select from grocery";
+           PreparedStatement ps = connection.prepareStatement(sql);
+           ResultSet rs = ps.executeQuery();
+           while(rs.next()){
+               groceries.add(rs.getString("grocery_name"));
+           }
+       }catch(SQLException e){
+           e.printStackTrace();
+       }
+       return groceries;
+   }
+   
+   
+   public void addGrocery(String groceryName){
+       Connection connection = ConnectionUtil.getConnection();
+       try {
+           //Write SQL logic here
+           String sql = "insert into grocery (grocery_name) values ('"+ groceryName +"');";
+           PreparedStatement ps = connection.prepareStatement(sql);
+           ps.executeUpdate();
+       }catch(SQLException e){
+           e.printStackTrace();
+       }
+   }
 
 }
