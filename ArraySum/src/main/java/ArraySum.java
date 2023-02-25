@@ -1,6 +1,6 @@
 import java.util.Arrays;
 public class ArraySum {
-   public static void main (String args[]){
+   //public static void main (String args[]){
     /**
      * This method should return the sum of all ints in an array - this is a very useful trick to know!
      * This problem will require you to use a for loop. No other guidance will be provided.
