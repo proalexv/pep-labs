@@ -24,7 +24,7 @@ public class GroceryDAO {
        List<String> groceries = new ArrayList<>();
        try {
            //Write SQL logic here
-           String sql = "Select from grocery";
+           String sql = "Select * from grocery";
            PreparedStatement ps = connection.prepareStatement(sql);
            ResultSet rs = ps.executeQuery();
            while(rs.next()){
