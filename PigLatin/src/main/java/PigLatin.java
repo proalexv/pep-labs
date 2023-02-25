@@ -15,21 +15,18 @@ public class PigLatin {
      *
      * @param in A string.
      * @return the pig latin form of in.
-     */
-  
-    
-    
-				
-    public String returnPigLatin(String in){
-        
-        
-        for (int i = 1; i < in.length()-1; i++) {
-          String latinWord = in.substring(i,i+1);
-            }
-            latinWord += latinWord + in.substring(in.length()-1,in.length() );
-            latinWord += latinWord + "ay";
-            return latinWord;
-    }
-       
+     *
+      */
+     String[] words = in.split("\\s+");
+    StringBuilder sb = new StringBuilder();
+
+    for (String word : words) {
+        char firstChar = word.charAt(0);
+        String restOfWord = word.substring(1);
+        sb.append(restOfWord).append(firstChar).append("ay").append(" ");
     }
 
+    sb.deleteCharAt(sb.length() - 1); // remove extra space at the end
+
+    return sb.toString();
+}
