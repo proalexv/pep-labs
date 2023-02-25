@@ -17,16 +17,19 @@ public class PigLatin {
      * @return the pig latin form of in.
      *
       */
-     String[] words = in.split("\\s+");
-    StringBuilder sb = new StringBuilder();
-
-    for (String word : words) {
-        char firstChar = word.charAt(0);
-        String restOfWord = word.substring(1);
-        sb.append(restOfWord).append(firstChar).append("ay").append(" ");
-    }
-
-    sb.deleteCharAt(sb.length() - 1); // remove extra space at the end
-
-    return sb.toString();
+      StringBuilder result = new StringBuilder();
+    
+      String[] words = in.split(" ");
+      
+      for(String word: words){
+          if(word.length() == 1){
+              result.append(word).append("ay");
+          }else{
+              result.append(word.substring(1)).append(word.charAt(0)).append("ay");
+          }
+          result.append(" ");
+      }
+      
+      return result.toString().trim();
+  }
 }
